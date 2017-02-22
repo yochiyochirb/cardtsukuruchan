@@ -8,6 +8,7 @@ require "roo"
 require "pry"
 require "octokit"
 
+# NOTE: あとで引数とかで受け取れるようにする。
 xlsx = Roo::Excelx.new("./yochiyochirb-tickets-57728.xlsx")
 
 # NOTE: やりたいことカラムの、有効な値があるセルを抜き出す。[0] は header なので無視してる。
