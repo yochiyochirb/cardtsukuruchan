@@ -1,11 +1,9 @@
 require "bundler/setup"
 require "rubygems"
 Bundler.require
-
 require "dotenv/load"
 
 require "roo"
-require "pry"
 require "octokit"
 
 # NOTE: あとで引数とかで受け取れるようにする。
