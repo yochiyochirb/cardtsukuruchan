@@ -5,7 +5,7 @@ Doorkeeper の申込時アンケートで記入してもらった「やりたい
 ## 準備
 
 - [Personal access tokens](https://github.com/settings/token://github.com/settings/tokens) のページで token を取得する必要があります。
-- .env ファイルに必要な情報を記入します。
+- .env.sample ファイルを元にして、必要な情報を記入した .env ファイルを用意する必要があります。
 
 ```shell
 cp .env.sample .env
