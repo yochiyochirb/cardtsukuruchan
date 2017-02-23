@@ -6,8 +6,7 @@ require "dotenv/load"
 require "roo"
 require "octokit"
 
-# NOTE: あとで引数とかで受け取れるようにする。
-xlsx = Roo::Excelx.new("./yochiyochirb-tickets-57728.xlsx")
+xlsx = Roo::Excelx.new(ARGV[0])
 
 # NOTE: やりたいことカラムの、有効な値があるセルを抜き出す。[0] は header なので無視してる。
 todos = xlsx.sheet("参加者").column(7)[1..-1].select{|todo| !todo.empty? }
