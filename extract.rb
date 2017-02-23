@@ -19,4 +19,5 @@ column = client.project_columns(project[:id]).find{|col| col[:name] == ENV["COLU
 
 todos.each do |todo|
   client.create_project_card(column[:id], note: todo)
+  puts "Created note: #{todo}"
 end
