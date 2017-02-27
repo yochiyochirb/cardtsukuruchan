@@ -9,7 +9,7 @@ require "octokit"
 xlsx = Roo::Excelx.new(ARGV[0])
 
 # NOTE: やりたいことカラムの、有効な値があるセルを抜き出す。[0] は header なので無視してる。
-todos = xlsx.sheet("参加者").column(7)[1..-1].select{|todo| !todo.empty? }
+todos = xlsx.sheet("参加者").column(7)[1..-1].reject{|todo| todo.nil? || todo.empty? }
 
 client = Octokit::Client.new(access_token: ENV["GITHUB_TOKEN"])
 
